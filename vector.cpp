@@ -5,10 +5,11 @@ int main()
 {
     std::vector <int> notes(3);
     std::cout<<"notes intially : "<<std::endl;
+    
     for (auto &x : notes) {
-        /* code */
         std::cout << x << std::endl;
     }
+    
     std::cout<<"enter numbers"<<std::endl;
     std::cin >> notes.at(0);
     std::cin >> notes.at(1);
@@ -31,7 +32,13 @@ int main()
     int size_notes = notes.size();
     std::cout << "size = " << size_notes << std::endl;
     // it is better to use this method to output the elements of a vector using 
+    notes.push_back(44);
+    notes.push_back(55);
+    
+    size_notes = notes.size();
+    std::cout << " new size = " << size_notes << std::endl;
     int som =0;
+    
     for (const int &x : notes)
     {
         if(som<size_notes-1)
@@ -39,9 +46,21 @@ int main()
         else
             std::cout << x << std::endl;
         som++;
-        //std::cout << notes[i] << std::endl;
         
     }
-    //std::cout << std::endl;
+    std::cout <<"now let's move to vectors with char"<<std::endl;
+    std::vector <char> vowels(7);
+    for (char &letre : vowels) {
+        //std::cout << letre << std::endl;
+        std::cout << letre << ",";
+    }
+    std::cout<< std::endl;
+    vowels.at(0) = 'a';
+    vowels[1] = 'e';
+    for (char &letre : vowels) {
+        std::cout << letre << ", ";
+    }
+    
+    
     return 0;
 }
