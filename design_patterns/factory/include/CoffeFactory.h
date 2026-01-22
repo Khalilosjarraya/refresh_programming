@@ -9,6 +9,6 @@ class CoffeFactory
 {
 public:
     static Coffe* makeCoffe(const int& type);
-    static bool sugar();
+    // static bool sugar();
 };
 #endif

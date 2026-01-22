@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
     if(coffe != nullptr)
     {
         coffe->prepare();
-        CoffeFactory::sugar();
+        coffe->sugar();
         delete coffe;
     }
     return 0;
