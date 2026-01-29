@@ -3,7 +3,6 @@
 void BaseHandler::setNext(Handler* next)  
 {
     nextHandler = next;
-    // return next;
 }
 
 void BaseHandler::handle(std::string request) 
@@ -13,7 +12,7 @@ void BaseHandler::handle(std::string request)
         nextHandler->handle(request);
     } else
     {
-        std::cout << "Rquest: "<< request <<" is unhandled\nWe need to call the client to get more details";
+        std::cout << "Request: "<< request <<" is unhandled\nWe need to call the client to get more details\n";
     }
     
 }

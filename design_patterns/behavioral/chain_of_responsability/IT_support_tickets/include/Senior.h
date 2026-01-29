@@ -8,5 +8,4 @@ class Senior : public BaseHandler
     public:
         void handle(std::string request) override;
 };
-
 #endif
